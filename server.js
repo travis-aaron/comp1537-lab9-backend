@@ -13,7 +13,7 @@ app.listen(5500, () => {
 app.get("/getWeatherByCity", (req, res) => {
   x = undefined;
   fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${req.query.city}&appid={API}&units=metric`,
+    `https://api.openweathermap.org/data/2.5/weather?q=${req.query.city}&appid=${API}&units=metric`,
   )
     .then((resp) => resp.json())
     .then((resp) => {
